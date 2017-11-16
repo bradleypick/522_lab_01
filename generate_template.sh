@@ -1,5 +1,9 @@
 #!/bin/bash
 
+mkdir "$1";
+
+cd "$1";
+
 mkdir src;
 
 mkdir data;
@@ -12,7 +16,7 @@ touch README.md;
 
 touch CITATION.md;
 
-if [[ $1 == "MIT" ]]; then
+if [[ $3 == "MIT" ]]; then
 echo -e "The MIT License (MIT): \n\nCopyright (C) 2017 " "$2" >> LICENCE.md;
 echo -e "\n\nPermission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -34,12 +38,9 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE." >> LICENCE.md;
-elif [[ $1 == "GNU" ]]; then
+elif [[ $3 == "GNU" ]]; then
 echo -e "The GNU General Public License: \n\nCopyright (C) 2017 " "$2" >> LICENCE.md;
-echo -e "Copyright (C) <year>  <name of author>
-
-
-This program is free software: you can redistribute it and/or modify
+echo -e "\n\nThis program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
@@ -52,5 +53,5 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>." >> LICENCE.md;
 else
-touch LICENCE.md;
+echo -e "Copyright (C) 2017 " "$2" >> LICENCE.md;
 fi
