@@ -13,12 +13,10 @@ touch README.md;
 touch CITATION.md;
 
 if [[ $1 == "MIT" ]]; then
-echo -e "The MIT License (MIT):
-
-
-Permission is hereby granted, free of charge, to any person
+echo -e "The MIT License (MIT): \n\nCopyright (C) 2017 " "$2" >> LICENCE.md;
+echo -e "\n\nPermission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
-files (the “Software”), to deal in the Software without
+files (the 'Software'), to deal in the Software without
 restriction, including without limitation the rights to use,
 copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the
@@ -28,7 +26,7 @@ conditions:
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
 OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
@@ -37,7 +35,8 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE." >> LICENCE.md;
 elif [[ $1 == "GNU" ]]; then
-echo -e "The GNU General Public License:
+echo -e "The GNU General Public License: \n\nCopyright (C) 2017 " "$2" >> LICENCE.md;
+echo -e "Copyright (C) <year>  <name of author>
 
 
 This program is free software: you can redistribute it and/or modify
