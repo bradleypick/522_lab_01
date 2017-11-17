@@ -1,21 +1,26 @@
 #!/bin/bash
 
-mkdir "$1";
+## check that we have a name for the project
+if [ $# -eq 0 ]; then
+    echo "You must name your root folder!";
+    exit 1
+fi
 
+## create root folder and navigate to it
+mkdir "$1";
 cd "$1";
 
+## create the source, data, doc, and results folders
 mkdir src;
-
 mkdir data;
-
 mkdir doc;
-
 mkdir results;
 
+## create empty citation and readme files
 touch README.md;
-
 touch CITATION.md;
 
+## create licence file with MIT, GNU GPL or no licence
 if [[ $3 == "MIT" ]]; then
 echo -e "The MIT License (MIT): \n\nCopyright (C) 2017 " "$2" >> LICENCE.md;
 echo -e "\n\nPermission is hereby granted, free of charge, to any person
