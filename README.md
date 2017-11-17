@@ -7,17 +7,18 @@ It accepts three arguments:
 
 * The first is a MANDATORY string that will be the
 project name and name of the root folder (all generated files will live in here).
+If this argument is not supplied, the script exits with nonzero status.
 
-* The second argument is optional and should be the name of the project author
-(will be printed in the copyright statement of the chosen licence).
+* The second argument is an optional string and should be the name of the project
+author (will be printed in the copyright statement of the chosen licence).
 
 * The third argument is an optional three letter character string that is
 either `"MIT"` or `"GNU"`. If either is supplied, the `LICENCE.md` file that
-is created by the shell script will contain the MIT or GNU GPL licence. If
-neither is supplied, then the `LICENCE.md` file will contain a "Copyright"
-message that will include the authors name if provided.
+is created will contain the MIT or GNU GPL licence. If neither is supplied,
+then the `LICENCE.md` file will contain a "Copyright (C) 2017"
+message that will include the name of the author(s) (if provided).
 
-The directory structure will looksomething like this:
+The directory structure will look something like this:
 
 ```
 .
