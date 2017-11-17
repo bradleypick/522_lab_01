@@ -19,6 +19,21 @@ message that will include the authors name if provided.
 
 The directory structure will looksomething like this:
 
-
+```
+.
+|
+|-- README.md
+|-- LICENSE.md
+|-- CITATION.md
+|
+|-- data
+|  -- (raw data goes here)
+|-- doc
+|  -- (text documents go here)
+|-- results
+|  -- (files geneerated during cleaning analysis go here)
+|-- src
+|  -- (source code goes here)
+```
 
 Note: this is a lab assignment for DSCI 522 in UBC's MDS program.
